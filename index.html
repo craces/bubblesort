@@ -1,0 +1,62 @@
+<!doctype HTLM>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bubblesort</title>
+<script>
+	
+		function funkcja() {  
+var one = parseInt (document.getElementById("one").value);
+	var two = parseInt (document.getElementById("two").value);
+	var three = parseInt (document.getElementById("three").value);
+	var four = parseInt (document.getElementById("four").value);
+	var five = parseInt (document.getElementById("five").value);
+	var a = [one,two,three,four,five];
+function bubbleSort(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i] > a[i+1]) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+
+bubbleSort(a);
+console.log(a);
+		}
+		  
+	//document.getElementById('content').innerHTML=(bubbleSort([one,two,three,four,five]));}
+	
+//
+</script>
+</head>
+<body>
+	<h1>sortowanie</h1>
+<form>
+	<div class="container">
+		<input class="pole" id="one" type="text" placeholder="Pierwsza liczba">
+	</div>
+	<div class="container">
+		<input class="pole" id="two" type="text" placeholder="Druga liczba">
+	</div>
+	<div class="container">
+		<input class="pole" id="three" type="text" placeholder="Trzecia liczba">
+	</div>
+	<div class="container">
+		<input class="pole" id="four" type="text" placeholder="Czwarta liczba">
+	</div>
+	<div class="container">
+		<input class="pole" id="five" type="text" placeholder="Piata liczba">
+	</div>
+		<input class="container btn" id="butt" type="button" onclick="funkcja()" value="sprawdź" >
+</form>
+	<p id="content"></p>
+</body>
+</html>
